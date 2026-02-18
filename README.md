@@ -39,12 +39,16 @@ All datasets are in **CSV format** with the following attributes:
 - Include for **numeric attributes**: max, min, mean, standard deviation, histogram 📊.  
 - Include for **nominal attributes**: mode and bar chart 📊.  
 
+################################# show first 5/6 variables .......................................................................
+
+
 **1.2 ⚠️ Missing or Error Data Analysis**  
 - Describe all missing values (null, blank, unknown, etc.)  
 - Describe any **invalid or mismatching data**  
 - Suggest handling methods for each attribute.  
 > ⚠️ Do **not clean the data** at this stage.
 
+########################################################  add 1 tables error data handling & say we will delete them ....................................
 ---
 
 ### 2. Data Preparation
@@ -53,9 +57,12 @@ All datasets are in **CSV format** with the following attributes:
 - Write Python programs to remove variables with no inference to the target.  
 - Provide justifications and keep **comments** for further processing.  
 
+ ###################################################################### remove cast id ..........................................
 **2.2 🧼 Data Cleaning**  
 - Write Python programs to clean the data.  
 - Provide **justifications** for each cleaning step.  
+
+#########################################################  mention as null - delete those data  + final data Dimension ........................................
 
 **2.3 🔄 Variable Conversion**  
 - Write Python programs for the following conversions and include **screenshots**:  
@@ -68,7 +75,8 @@ All datasets are in **CSV format** with the following attributes:
     - 3 = High income  
   - **2.7 🎓 EDUCATION → ordinal numbers** based on USA education levels (ascending order)  
   - **2.8 💼 OCCUPATION → one-hot encoding** (binary columns for each occupation)
-
+    
+#######################################################################  just mention that only which function is used to for encoding in each question ...................
 ---
 
 ### 3. Data Analysis
@@ -77,6 +85,8 @@ All datasets are in **CSV format** with the following attributes:
 - Convert variables (except COMMENTS) not included in preparation into **numerical or binary format**.  
 - Write a Python program to show **correlation of all variables with the target**.  
 
+#############################  CUST_MARITAL_STATUS + which function ,,,   Add correlation figure ..... 
+  
 **3.2 📝 Sentiment Analysis**  
 - Analyze the COMMENTS column using Python.  
 - Create a new **Sentiment column** with values:  
@@ -84,6 +94,7 @@ All datasets are in **CSV format** with the following attributes:
   - 0 = Neutral ⚪  
   - -1 = Negative ❌  
 
+##########################################  add figure 3.2.3 sentiment and its count ...........................................................
 ---
 
 ### 4. Data Exploration
@@ -92,6 +103,7 @@ All datasets are in **CSV format** with the following attributes:
 - The program should **allow runtime selection** of variables.  
 - Continue running until the **user chooses to exit** 🔁.
 
+################################################################# just add 4.1 picture ................................................
 ---
 
 ### 5. Data Mining
@@ -109,7 +121,7 @@ All datasets are in **CSV format** with the following attributes:
 - Implement an application using the **logistic regression model**.  
 - Include a **user interface** to input customer records via **keyboard or file upload** ⌨️📁.  
 - Output **predicted Affinity Card results** to the user 🎯.
-
+####################################################################  Add 10 correlation value picture, model resutls, 5.3.1, 5.3.9, 5.9.10 ( how the program will work)
 ---
 
 ### 📎 Deliverables
