@@ -1,67 +1,131 @@
-# Marketing campaign data analysis, Affinity-Card-Prediction, Predictive Application and User Interfac
+# 🎯 Marketing Campaign Data Analysis: Affinity-Card Prediction, Predictive Application, and User Interface
 
-The data set contains 1500 customer records. Each record consists of 19 variables, which includes socio-demographic and product ownership information. Variable 11, AFFINITY_CARD (1 = High-value, 0 = Low-value), is the target variable.
-All datasets are in CSV format with the following attributes:
-1.	CUST_ID
-2.	CUST_GENDER
-3.	AGE
-4.	CUST_MARITAL_STATUS
-5.	COUNTRY_NAME
-6.	CUST_INCOME_LEVEL
-7.	EDUCATION
-8.	OCCUPATION
-9.	HOUSEHOLD_SIZE
-10.	YRS_RESIDENCE
-11.	AFFINITY_CARD
-12.	BULK_PACK_DISKETTES
-13.	FLAT_PANEL_MONITOR
-14.	HOME_THEATER_PACKAGE
-15.	BOOKKEEPING_APPLICATION
-16.	PRINTER_SUPPLIES
-17.	Y_BOX_GAMES
-18.	OS_DOC_SET_KANJI
-19.	COMMENTS
+The dataset contains **1,500 customer records**, each consisting of **19 variables**, including socio-demographic and product ownership information. The target variable is:
 
+- **🎯 AFFINITY_CARD (Variable 11):**  
+  - `1 = High-value`  
+  - `0 = Low-value`
 
-________________________________________
+All datasets are in **CSV format** with the following attributes:
 
+1. 🆔 CUST_ID  
+2. 👤 CUST_GENDER  
+3. 📅 AGE  
+4. 💍 CUST_MARITAL_STATUS  
+5. 🌎 COUNTRY_NAME  
+6. 💵 CUST_INCOME_LEVEL  
+7. 🎓 EDUCATION  
+8. 💼 OCCUPATION  
+9. 🏠 HOUSEHOLD_SIZE  
+10. 🏘️ YRS_RESIDENCE  
+11. 🎯 AFFINITY_CARD  
+12. 💽 BULK_PACK_DISKETTES  
+13. 🖥️ FLAT_PANEL_MONITOR  
+14. 🎬 HOME_THEATER_PACKAGE  
+15. 📒 BOOKKEEPING_APPLICATION  
+16. 🖨️ PRINTER_SUPPLIES  
+17. 🎮 Y_BOX_GAMES  
+18. 📚 OS_DOC_SET_KANJI  
+19. 📝 COMMENTS  
 
+---
 
-Requirements Specifications
-## 1. Data Understanding
-1.1. Produce a metadata table to show the characteristics of each attribute.
-The metadata table should contain attribute name, description, maximum, minimum, mean, standard deviation, and histogram for numeric data, and mode and bar chart for nominal data.
-1.2. Describe missing or error data with suggested handling methods for each attribute. Do not clean them at this stage.
-Missing data should include all types such as null, blank, unknown, etc.
-Errors should include any invalid or mismatching data.
-________________________________________
-## 2. Data Preparation
-2.1. Write Python programs to remove variables with no inference to the target, with justifications, and keep comments for further processing.
-2.2. Write Python programs to clean data and provide justifications.
-2.3. Write Python programs to convert variables as per the following requirements. Provide screenshots of Python code with comments, as well as data before and after conversion.
-2.4. Convert CUST_GENDER into binary (F = 0, M = 1).
-2.5. Convert COUNTRY_NAME into ordinal numbers based on their frequency of occurrence in descending order.
-2.6. Convert CUST_INCOME_LEVEL into three ordinal levels:
-                •	1 = Low income
-                •	2 = Middle income
-                •	3 = High income
-2.7. Convert EDUCATION into ordinal numbers based on USA education levels in ascending order.
-2.8. Convert OCCUPATION into a series of binary columns using one-hot encoding.
-________________________________________
-## 3. Data Analysis
-a) Convert variables (except comments) not included in the data preparation stage into numerical or binary format and write a Python program to show the correlation of all variables with the target.
-b) Write a Python program to analyze comment sentiment and create a sentiment column with values:
-•	1 = Positive
-•	0 = Neutral
-•	-1 = Negative
-________________________________________
-## 4. Data Exploration
-Write a Python program that displays a histogram of one processed variable, allowing the user to select any variable at runtime. The program should continue running until the user chooses to exit.
-________________________________________
-## 5. Data Mining
-•	Keep the first 100 customer records from the processed campaign data for testing and use the remaining records to build a logistic regression model using the top 10 relevant independent variables. Identify the intercept and coefficients for each independent variable.
-•	Test the accuracy of the model using the first 100 customer records and explain the results with appropriate graphs.
-•	Implement a predictive application based on the logistic regression model. The application should include a suitable user interface that allows users to input customer records via keyboard or file upload and receive predicted outputs.
+## 📝 Requirement Specifications
+
+### 1. Data Understanding
+
+**1.1 🗂 Metadata Table**  
+- Produce a table showing characteristics of each attribute.  
+- Include for **numeric attributes**: max, min, mean, standard deviation, histogram 📊.  
+- Include for **nominal attributes**: mode and bar chart 📊.  
+
+**1.2 ⚠️ Missing or Error Data Analysis**  
+- Describe all missing values (null, blank, unknown, etc.)  
+- Describe any **invalid or mismatching data**  
+- Suggest handling methods for each attribute.  
+> ⚠️ Do **not clean the data** at this stage.
+
+---
+
+### 2. Data Preparation
+
+**2.1 🧹 Remove Irrelevant Variables**  
+- Write Python programs to remove variables with no inference to the target.  
+- Provide justifications and keep **comments** for further processing.  
+
+**2.2 🧼 Data Cleaning**  
+- Write Python programs to clean the data.  
+- Provide **justifications** for each cleaning step.  
+
+**2.3 🔄 Variable Conversion**  
+- Write Python programs for the following conversions and include **screenshots**:  
+
+  - **2.4 👤 CUST_GENDER → binary:** F = 0, M = 1  
+  - **2.5 🌎 COUNTRY_NAME → ordinal numbers** based on frequency (descending order)  
+  - **2.6 💵 CUST_INCOME_LEVEL → ordinal levels:**  
+    - 1 = Low income  
+    - 2 = Middle income  
+    - 3 = High income  
+  - **2.7 🎓 EDUCATION → ordinal numbers** based on USA education levels (ascending order)  
+  - **2.8 💼 OCCUPATION → one-hot encoding** (binary columns for each occupation)
+
+---
+
+### 3. Data Analysis
+
+**3.1 📊 Correlation Analysis**  
+- Convert variables (except COMMENTS) not included in preparation into **numerical or binary format**.  
+- Write a Python program to show **correlation of all variables with the target**.  
+
+**3.2 📝 Sentiment Analysis**  
+- Analyze the COMMENTS column using Python.  
+- Create a new **Sentiment column** with values:  
+  - 1 = Positive ✅  
+  - 0 = Neutral ⚪  
+  - -1 = Negative ❌  
+
+---
+
+### 4. Data Exploration
+
+- Write a Python program to **display a histogram** of any processed variable 📊.  
+- The program should **allow runtime selection** of variables.  
+- Continue running until the **user chooses to exit** 🔁.
+
+---
+
+### 5. Data Mining
+
+**5.1 🏗 Model Building**  
+- Keep the **first 100 customer records** as a test set.  
+- Use the remaining records to **build a logistic regression model** using the **top 10 relevant independent variables**.  
+- Identify the **intercept and coefficients** for each independent variable.  
+
+**5.2 🧪 Model Testing**  
+- Test the model on the **first 100 records**.  
+- Explain results with **appropriate graphs** 📈 and performance metrics.  
+
+**5.3 💻 Predictive Application**  
+- Implement an application using the **logistic regression model**.  
+- Include a **user interface** to input customer records via **keyboard or file upload** ⌨️📁.  
+- Output **predicted Affinity Card results** to the user 🎯.
+
+---
+
+### 📎 Deliverables
+
+- Python scripts (.py or Jupyter Notebook) for:  
+  - Data cleaning 🧼  
+  - Conversion 🔄  
+  - Correlation & Sentiment analysis 📊📝  
+  - Histogram plotting 📊  
+  - Logistic regression model & testing 🏗🧪  
+  - Predictive application 💻  
+
+- Screenshots and charts for each step 📸  
+
+- Processed dataset with new **binary and ordinal variables**, **sentiment column**, and **logistic regression results** ✅
+
 
 <div align="center">
   
