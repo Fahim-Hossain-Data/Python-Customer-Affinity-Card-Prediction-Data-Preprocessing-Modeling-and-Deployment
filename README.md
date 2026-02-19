@@ -39,10 +39,14 @@ All datasets are in **CSV format** with the following attributes:
 - Include for **numeric attributes**: max, min, mean, standard deviation, histogram 📊.  
 - Include for **nominal attributes**: mode and bar chart 📊.  
 
+🟩 The metadata table has been created according to the specified requirements, summarizing the characteristics of each attribute. For numeric attributes, the table includes maximum, minimum, mean, standard deviation, and corresponding histograms 📊 to visualize their distributions. For nominal attributes, the table presents the mode along with bar charts 📊 to illustrate category frequencies.
+
+A portion of the metadata table, showing a few representative attributes, is presented below:
+
 <p align="center">
   <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/07c313677ad06b692d3106042931947352b686e9/MetaData_Table.png" alt="Histogram" width="600"/>
   <br>
-  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+  <em>Figure: Summary of Attribute Characteristics with Statistics and Charts</em>
 </p>
 
 
@@ -51,6 +55,9 @@ All datasets are in **CSV format** with the following attributes:
 - Describe any **invalid or mismatching data**  
 - Suggest handling methods for each attribute.  
 > ⚠️ Do **not clean the data** at this stage.
+
+🟩
+
 <p align="center">
   <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/473e8b07eec2c8a08b2d9caf8e6e52dfc3627821/Error.png" alt="Histogram" width="600"/>
   <br>
