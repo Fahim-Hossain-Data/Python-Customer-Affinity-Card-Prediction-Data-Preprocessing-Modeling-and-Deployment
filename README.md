@@ -6,7 +6,7 @@ The dataset contains **1,500 customer records**, each consisting of **19 variabl
   - `1 = High-value`  
   - `0 = Low-value`
 
-The dataset are in **CSV format** with the following attributes:
+The dataset is in **CSV format** with the following attributes:
 
 1. 🆔 CUST_ID  
 2. 👤 CUST_GENDER  
@@ -55,7 +55,7 @@ A portion of the metadata table, showing a few representative attributes, is pre
 - Describe any **invalid or mismatching data**   
 > ⚠️ Do **not clean the data** at this stage.
 
-🟩 Missing values and erroneous data were identified in the HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns. The figure presents these columns along with the counts of missing and erroneous entries. Additionally, the grand total of missing and erroneous values across these columns is provided
+🟩 Missing values and erroneous data were identified in the HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns. The figure presents these columns along with the counts of missing and erroneous entries. Additionally, the grand total of missing and erroneous values across these columns is calculated.
 
 <p align="center">
   <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/473e8b07eec2c8a08b2d9caf8e6e52dfc3627821/Error.png" alt="Histogram" width="600"/>
@@ -73,11 +73,11 @@ A portion of the metadata table, showing a few representative attributes, is pre
 - Provide **justifications** for each cleaning step (Missing or Error Data).
 
 🟩 The cleaning process for HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns are descrived below:
-- ** HOUSEHOLD_SIZE
+- **HOUSEHOLD_SIZE**
 Error values such as “9+”, “5-Apr”, and “8-Jun” were identified. The value “9+” is replaced with 9, while invalid entries like “5-Apr” and “8-Jun” are removed.
-- ** OCCUPATION
+- **OCCUPATION**
 Entries marked as “?” indicate missing occupation data and are removed. This ensures the column contains only valid categorical values, maintaining dataset quality for analysis.
-- ** COMMENTS
+- **COMMENTS**
 Null or blank entries are replaced with “No Comment”, explicitly marking missing feedback as a valid category.
 
 
