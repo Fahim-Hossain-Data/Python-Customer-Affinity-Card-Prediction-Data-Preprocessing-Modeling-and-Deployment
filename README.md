@@ -39,7 +39,11 @@ All datasets are in **CSV format** with the following attributes:
 - Include for **numeric attributes**: max, min, mean, standard deviation, histogram 📊.  
 - Include for **nominal attributes**: mode and bar chart 📊.  
 
-![MetaData](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/07c313677ad06b692d3106042931947352b686e9/MetaData_Table.png)
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/07c313677ad06b692d3106042931947352b686e9/MetaData_Table.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
 
 **1.2 ⚠️ Missing or Error Data Analysis**  
