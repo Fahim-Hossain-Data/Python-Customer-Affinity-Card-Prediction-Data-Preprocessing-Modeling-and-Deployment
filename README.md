@@ -51,8 +51,11 @@ All datasets are in **CSV format** with the following attributes:
 - Describe any **invalid or mismatching data**  
 - Suggest handling methods for each attribute.  
 > ⚠️ Do **not clean the data** at this stage.
-
-![Error](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/473e8b07eec2c8a08b2d9caf8e6e52dfc3627821/Error.png)
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/473e8b07eec2c8a08b2d9caf8e6e52dfc3627821/Error.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
 ########################################################  add 1 tables error data handling & say we will delete them ....................................
 ---
@@ -67,8 +70,11 @@ All datasets are in **CSV format** with the following attributes:
 **2.2 🧼 Data Cleaning**  
 - Write Python programs to clean the data.  
 - Provide **justifications** for each cleaning step.  
-
-![Handling](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/473e8b07eec2c8a08b2d9caf8e6e52dfc3627821/Handling.png)
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/473e8b07eec2c8a08b2d9caf8e6e52dfc3627821/Handling.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
 #########################################################  mention as null - delete those data  + final data Dimension ........................................
 
@@ -92,8 +98,12 @@ All datasets are in **CSV format** with the following attributes:
 **3.1 📊 Correlation Analysis**  
 - Convert variables (except COMMENTS) not included in preparation into **numerical or binary format**.  
 - Write a Python program to show **correlation of all variables with the target**.  
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/14776f5f8b9e75ccbcfdfd054fca0399a545c159/Corr_ALL.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
-![Corr_ALL](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/14776f5f8b9e75ccbcfdfd054fca0399a545c159/Corr_ALL.png)
 #############################  CUST_MARITAL_STATUS + which function ,,,   Add correlation figure ..... 
   
 **3.2 📝 Sentiment Analysis**  
@@ -102,8 +112,13 @@ All datasets are in **CSV format** with the following attributes:
   - 1 = Positive ✅  
   - 0 = Neutral ⚪  
   - -1 = Negative ❌  
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/4a4340fa8026d1ab1fe1cd55886a2598e3724753/Senti.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
-![Senti](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/4a4340fa8026d1ab1fe1cd55886a2598e3724753/Senti.png)w 
+w 
 
 ##########################################  add figure 3.2.3 sentiment and its count ...........................................................
 ---
@@ -113,8 +128,12 @@ All datasets are in **CSV format** with the following attributes:
 - Write a Python program to **display a histogram** of any processed variable 📊.  
 - The program should **allow runtime selection** of variables.  
 - Continue running until the **user chooses to exit** 🔁.
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/3e62e8245f75e9389adab96786cfbfb02a2e2e3c/Hist_prog.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
-![Hist_Prog](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/3e62e8245f75e9389adab96786cfbfb02a2e2e3c/Hist_prog.png)
 
 ################################################################# just add 4.1 picture ................................................
 ---
@@ -124,25 +143,48 @@ All datasets are in **CSV format** with the following attributes:
 **5.1 🏗 Model Building**  
 - Keep the **first 100 customer records** as a test set.  
 - Use the remaining records to **build a logistic regression model** using the **top 10 relevant independent variables**.  
-- Identify the **intercept and coefficients** for each independent variable.  
-![Intercept-Top10_Corr](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/0fb70468b38feb38e7c94a95a23f8a8dd90a45c7/Intercept_Top10-CorrL.png)
+- Identify the **intercept and coefficients** for each independent variable.
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/0fb70468b38feb38e7c94a95a23f8a8dd90a45c7/Intercept_Top10-CorrL.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
+  
+
 
 **5.2 🧪 Model Testing**  
 - Test the model on the **first 100 records**.  
 - Explain results with **appropriate graphs** 📈 and performance metrics.  
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/a8a90c5f86988bf0ea9056647d2e273c523833a5/Performance_Mat.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
-![Performance](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/a8a90c5f86988bf0ea9056647d2e273c523833a5/Performance_Mat.png)
+
 
 **5.3 💻 Predictive Application**  
 - Implement an application using the **logistic regression model**.  
 - Include a **user interface** to input customer records via **keyboard or file upload** ⌨️📁.  
 - Output **predicted Affinity Card results** to the user 🎯.
 
-![Optiom](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/ee6af59ff566c8d25c09f5f18cdb8bf2635a7176/Option.png)
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/ee6af59ff566c8d25c09f5f18cdb8bf2635a7176/Option.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
-![keyboard_Input](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/ee6af59ff566c8d25c09f5f18cdb8bf2635a7176/Keyboard_input.png)
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/ee6af59ff566c8d25c09f5f18cdb8bf2635a7176/Keyboard_input.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
-![File_Input](https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/ee6af59ff566c8d25c09f5f18cdb8bf2635a7176/File_Input.png)
+<p align="center">
+  <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/ee6af59ff566c8d25c09f5f18cdb8bf2635a7176/File_Input.png" alt="Histogram" width="600"/>
+  <br>
+  <em>Figure: Histogram for Temperature (°F) variable distribution</em>
+</p>
 
 
 ####################################################################  Add 10 correlation value picture, model resutls, 5.3.1, 5.3.9, 5.9.10 ( how the program will work)
