@@ -1,32 +1,25 @@
 # 🎯 Marketing Campaign Data Analysis: Affinity-Card Prediction, Predictive Application, and User Interface
 
-The dataset contains **1,500 customer records**, each consisting of **19 variables**, including socio-demographic and product ownership information. The target variable is:
+## 📋 Project Overview
+This project demonstrates an **end-to-end data analytics workflow** focused on predictive modeling and business insights.  
+It combines **feature engineering, sentiment analysis, and logistic regression** to identify key drivers of customer behavior.  
+A **user-friendly application** was developed to provide real-time predictions, showcasing practical skills in Python, data visualization, and applied machine learning.
 
-- **🎯 AFFINITY_CARD (Variable 11):**  
-  - `1 = High-value`  
-  - `0 = Low-value`
+--
 
-The dataset is in **CSV format** with the following attributes:
+## 📊 Dataset Overview
 
-1. 🆔 CUST_ID  
-2. 👤 CUST_GENDER  
-3. 📅 AGE  
-4. 💍 CUST_MARITAL_STATUS  
-5. 🌎 COUNTRY_NAME  
-6. 💵 CUST_INCOME_LEVEL  
-7. 🎓 EDUCATION  
-8. 💼 OCCUPATION  
-9. 🏠 HOUSEHOLD_SIZE  
-10. 🏘️ YRS_RESIDENCE  
-11. 🎯 AFFINITY_CARD  
-12. 💽 BULK_PACK_DISKETTES  
-13. 🖥️ FLAT_PANEL_MONITOR  
-14. 🎬 HOME_THEATER_PACKAGE  
-15. 📒 BOOKKEEPING_APPLICATION  
-16. 🖨️ PRINTER_SUPPLIES  
-17. 🎮 Y_BOX_GAMES  
-18. 📚 OS_DOC_SET_KANJI  
-19. 📝 COMMENTS  
+<p align="center">
+
+| **Observation**                | **Details** |
+|--------------------------------|-------------|
+| Total Records                   | 1,500       |
+| Total Variables                 | 19          |
+| Target Variable Name            | AFFINITY_CARD |
+| Target Variable Categories      | 0 = Low-value, 1 = High-value |
+| Missing Values Present?         | Yes (HOUSEHOLD_SIZE, OCCUPATION, COMMENTS), Variable Types: Numeric, Categorical |
+
+</p>
 
 ---
 
