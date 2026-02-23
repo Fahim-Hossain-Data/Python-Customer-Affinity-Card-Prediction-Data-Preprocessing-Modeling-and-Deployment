@@ -21,7 +21,7 @@ This project demonstrates an **end-to-end data analytics workflow** focused on p
 
 ---
 
-## 📝 Requirement Specifications
+## 📝 Project Insights & Explanation
 
 ### 1. Data Understanding
 
