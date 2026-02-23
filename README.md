@@ -74,9 +74,7 @@ A portion of the metadata table, showing a few representative attributes, is pre
 
 🟩 The data has 19 columns where CUST-ID is the unique identification for each customer. Thus, CUST-ID has been removed as it is not useful for inferring target variable. 
 
-**2.2 🧼 Data Cleaning:** 
-
-- Justification for each cleaning step (handling missing and erroneous data)
+**2.2 🧼 Data Cleaning:** Justification for each cleaning step (handling missing and erroneous data)
 
 🟩 The cleaning process for HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns are descrived below:
 - **HOUSEHOLD_SIZE**
@@ -98,7 +96,7 @@ After cleaning, the dataset contains **1312** valid rows, with **188** rows remo
 
 <div align="center">
 
-##### 🔄 Variable Conversion
+#### 🔄 Variable Conversion
 
 </div>
   
