@@ -5,11 +5,11 @@ This project demonstrates an **end-to-end data analytics workflow** focused on p
 It combines **feature engineering, sentiment analysis, and logistic regression** to identify key drivers of customer behavior.  
 A **user-friendly application** was developed to provide real-time predictions, showcasing practical skills in Python, data visualization, and applied machine learning.
 
---
+---
 
 ## 📊 Dataset Overview
 
-<p align="center">
+<div align="center">
 
 | **Observation**                | **Details** |
 |--------------------------------|-------------|
@@ -19,7 +19,7 @@ A **user-friendly application** was developed to provide real-time predictions, 
 | Target Variable Categories      | 0 = Low-value, 1 = High-value |
 | Missing Values Present?         | Yes (HOUSEHOLD_SIZE, OCCUPATION, COMMENTS), Variable Types: Numeric, Categorical |
 
-</p>
+</div>
 
 ---
 
