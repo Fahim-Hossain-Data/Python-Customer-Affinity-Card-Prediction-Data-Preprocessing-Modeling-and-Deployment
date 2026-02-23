@@ -75,6 +75,7 @@ A portion of the metadata table, showing a few representative attributes, is pre
 🟩 The data has 19 columns where CUST-ID is the unique identification for each customer. Thus, CUST-ID has been removed as it is not useful for inferring target variable. 
 
 **2.2 🧼 Data Cleaning:** 
+
 Justification for each cleaning step (handling missing and erroneous data)
 
 🟩 The cleaning process for HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns are descrived below:
