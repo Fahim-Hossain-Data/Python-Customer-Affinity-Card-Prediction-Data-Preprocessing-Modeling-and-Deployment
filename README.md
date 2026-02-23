@@ -5,6 +5,26 @@ This project demonstrates an **end-to-end data analytics workflow** focused on p
 
 ---
 
+<div align="center">
+
+## 🛠 Key Libraries & Skills Demonstrated
+
+**Data Manipulation & Analysis:** `pandas`, `numpy` — Data cleaning and transformation  
+
+**Data Visualization:** `matplotlib`, `seaborn` — Data visualization  
+
+**Machine Learning:** `scikit-learn` (`LogisticRegression`, `train_test_split`, `StandardScaler`, `accuracy_score`, `confusion_matrix`) — Model building, evaluation, and prediction  
+
+**Natural Language Processing:** `TextBlob` — Sentiment analysis  
+
+**Interactive Applications:** `ipywidgets`, `IPython.display` — User interface for the interactive prediction application  
+
+**File Handling:** Core Python modules (`io`, `base64`) — Uploading and processing
+
+</div>
+
+---
+
 ## 📊 Dataset Overview
 
 <div align="center">
@@ -26,11 +46,7 @@ This project demonstrates an **end-to-end data analytics workflow** focused on p
 ### 1. Data Understanding
 
 **1.1 🗂 Metadata Table**  
-- Produce a table showing characteristics of each attribute.  
-- Include for **numeric attributes**: max, min, mean, standard deviation, histogram.  
-- Include for **nominal attributes**: mode and bar chart.  
-
-🟩 The metadata table has been created according to the specified requirements, summarizing the characteristics of each attribute. For numeric attributes, the table includes maximum, minimum, mean, standard deviation, and corresponding histograms 📊 to visualize their distributions. For nominal attributes, the table presents the mode along with bar charts 📊 to illustrate category frequencies.
+🟩 The [metadata table](https://github.com/Fahim-Hossain-Data/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/9e7fdd72f4de9e8744f3ebf71edc78e3f616bfe6/2.%20Meta_Data_Table.pdf) summarizes the characteristics of each attribute. For numeric variables, it includes statistical measures such as maximum, minimum, mean, and standard deviation, along with histograms to visualize distributions. For categorical variables, the table highlights the mode and bar charts to show category frequencies.
 
 A portion of the metadata table, showing a few representative attributes, is presented below:
 
@@ -41,10 +57,8 @@ A portion of the metadata table, showing a few representative attributes, is pre
 </p>
 
 
-**1.2 ⚠️ Missing or Error Data Analysis**  
-- Describe all missing values (null, blank, unknown, etc.)  
-- Describe any **invalid or mismatching data**   
-> ⚠️ Do **not clean the data** at this stage.
+**1.2 ⚠️ Missing or Error Data Analysis**   
+> ⚠️ **not clean the data** at this stage.
 
 🟩 Missing values and erroneous data were identified in the HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns. The figure presents these columns along with the counts of missing and erroneous entries. Additionally, the grand total of missing and erroneous values across these columns is calculated.
 
@@ -54,15 +68,15 @@ A portion of the metadata table, showing a few representative attributes, is pre
   <em>Figure: Missing and Erroneous Values in Selected Columns</em>
 </p>
 
+---
+
 ### 2. Data Preparation
 
 **2.1 🧹 Remove Irrelevant Variables**  
-- Write Python programs to remove variables with no inference to the target.
 
 🟩 The data has 19 columns where CUST-ID is the unique identification for each customer. Thus, CUST-ID has been removed as it is not useful for inferring target variable. 
 
-**2.2 🧼 Data Cleaning**  
-- Provide **justifications** for each cleaning step (Missing or Error Data).
+**2.2 🧼 Data Cleaning:** Justification for each cleaning step (handling missing and erroneous data)
 
 🟩 The cleaning process for HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns are descrived below:
 - **HOUSEHOLD_SIZE**
@@ -82,43 +96,31 @@ The proposed suggestions for handling missing values and error values are presen
 
 After cleaning, the dataset contains **1312** valid rows, with **188** rows removed due to errors or missing values.
 
-**🔄 Variable Conversion**  
+<div align="center">
+
+##### 🔄 Variable Conversion
+
+</div>
+  
 - Write Python programs for the following conversions:  
 
-  - **2.3 👤 CUST_GENDER → binary:** F = 0, M = 1
-
-    🟩  The CUST_GENDER column was converted into a binary variable using a **mapping** approach to simplify analysis: F → 0, M → 1
+  - **2.3 👤 CUST_GENDER → binary:** converted into a binary variable using a **mapping** approach to simplify analysis: F → 0, M → 1.
     
-  - **2.4 🌎 COUNTRY_NAME → ordinal numbers** based on frequency (descending order)
+  - **2.4 🌎 COUNTRY_NAME → ordinal numbers:** Encoded as ordinal values based on frequency, where more frequent countries received lower numeric ranks.
 
-    🟩  The COUNTRY_NAME column was converted into ordinal numbers based on frequency. Countries that appear more frequently were assigned lower ordinal numbers,           and less frequent countries were assigned higher numbers. This was done using a **mapping** approach with descending order of frequency                            **(ascending=False)**.
+  - **2.5 💵 CUST_INCOME_LEVEL → ordinal levels:**  Grouped into ordinal income tiers (1 = Low income, 2 = Middle income, 3 = High income) to preserve income                                                             hierarchy while reducing category complexity.
+  
+  - **2.6 🎓 EDUCATION → ordinal numbers:** Mapped to ordinal levels based on the U.S. education hierarchy, ranging from preschool to PhD.
     
-  - **2.5 💵 CUST_INCOME_LEVEL → ordinal levels:**  
-    - 1 = Low income  
-    - 2 = Middle income  
-    - 3 = High income
+  - **2.7 💼 OCCUPATION → one-hot encoding:** Applied one-hot encoding to transform categorical occupations into binary indicator variables using get_dummies.
 
-    🟩 The CUST_INCOME_LEVEL column was converted into ordinal levels using a **mapping** approach:
-          - 1 = Low Income → “Below 30,000” and “30,000–49,999”
-          - 2 = Middle Income → “50,000–129,999”
-          - 3 = High Income → “130,000 and above”
-      This mapping reduces the number of categories while preserving the ordinal relationship of income, making the variable suitable for statistical and machine        learning analyses.
-      
-  - **2.6 🎓 EDUCATION → ordinal numbers** based on USA education levels (ascending order)
-
-    🟩 The EDUCATION column was converted into ordinal numbers based on the U.S. education system using a **mapping** approach. Each educational level was assigned a          numeric value reflecting its order in the education hierarchy (**ascending** order), from preschool to PhD
-    
-  - **2.7 💼 OCCUPATION → one-hot encoding** (binary columns for each occupation)
-
-    🟩 The OCCUPATION column was converted using one-hot encoding, creating binary columns for each occupation. This was implemented using **get_dummies**, which          transforms each categorical value into a separate column with 0/1 indicators.
-
+---
 
 ### 3. Data Analysis
 
 **3.1 📊 Correlation Analysis**  
-- Write a Python program to show **correlation of all variables with the target**.
 
-🟩 CORRELATION:  Correlation of independent variables with target variable is shown in the following figure. Based on the correlation values, the variable YRS_RESIDENCE has the highest correlation with the target variable AFFINITY_CARD, followed by EDUCATION and OCCUPATION.   
+🟩 Correlation of independent variables with target variable is shown in the following figure. Based on the correlation values, the variable YRS_RESIDENCE has the highest correlation with the target variable AFFINITY_CARD, followed by EDUCATION and OCCUPATION.   
 
 <p align="center">
   <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/14776f5f8b9e75ccbcfdfd054fca0399a545c159/Corr_ALL.png" alt="Histogram" width="600"/>
@@ -128,12 +130,7 @@ After cleaning, the dataset contains **1312** valid rows, with **188** rows remo
 
   
 **3.2 📝 Sentiment Analysis**  
-- Analyze the COMMENTS column using Python.  
-- Create a new **Sentiment column** with values:  
-  - 1 = Positive ✅  
-  - 0 = Neutral ⚪  
-  - -1 = Negative ❌
- 
+
 🟩 The COMMENTS column was analyzed for sentiment using the TextBlob package. A function classify_sentiment computes the polarity of each comment and classifies it as positive (1), neutral (0), or negative (-1). The results are stored in a new column, SENTIMENT.
 
 The number of comments classified under the SENTIMENT column and the levels (-1, 0, +1) are shown in the following figure 
@@ -147,12 +144,9 @@ The number of comments classified under the SENTIMENT column and the levels (-1,
 ---
 
 ### 4. Data Exploration
+A Python program has been developed to display histograms of any processed variable, allowing users to select the variable at runtime. The program runs continuously, providing visual insights until the user chooses to exit.
 
-- Write a Python program to **display a histogram** of any processed variable 📊.  
-- The program should **allow runtime selection** of variables.  
-- Continue running until the **user chooses to exit** 🔁.
-
-🟩 A Python program will be developed to visualize the distribution of processed variables ('CUST_GENDER', 'CUST_MARITAL_STATUS', 'COUNTRY_NAME', 'CUST_INCOME_LEVEL', 'EDUCATION', 'OCCUPATION', and 'sentiment') using histograms. In this program, users are allowed to select any one variable at runtime, and its corresponding histogram will be displayed. The program is designed to run continuously in a loop until an explicit exit command is given by the user. This interactive functionality has been implemented to support exploratory data analysis (EDA), where the distribution, spread, and potential outliers of variables can be observed. Such visual analysis is considered essential for understanding the underlying structure of the data during preprocessing and model development stages. 
+🟩 The Python program will be developed to visualize the distribution of processed variables ('CUST_GENDER', 'CUST_MARITAL_STATUS', 'COUNTRY_NAME', 'CUST_INCOME_LEVEL', 'EDUCATION', 'OCCUPATION', and 'sentiment') using histograms. In this program, users are allowed to select any one variable at runtime, and its corresponding histogram will be displayed. The program is designed to run continuously in a loop until an explicit exit command is given by the user. This interactive functionality has been implemented to support exploratory data analysis (EDA), where the distribution, spread, and potential outliers of variables can be observed. Such visual analysis is considered essential for understanding the underlying structure of the data during preprocessing and model development stages. 
 The user is presented with the interface shown in the following figure, where they can enter a variable name or exit the program.
 
 <p align="center">
@@ -161,12 +155,13 @@ The user is presented with the interface shown in the following figure, where th
   <em>Figure: user input interface</em>
 </p>
 
+---
 
 ### 5. Data Mining
 
 **5.1 🏗 Model Building**  
-- Keep the **first 100 customer records** as a test set.  
-- Use the remaining records to **build a logistic regression model** using the **top 10 relevant independent variables**.  
+- Kept the **first 100 customer records** as a test set.  
+- Used the remaining records to **build a logistic regression model** using the **top 10 relevant independent variables**.  
 - Identify the **intercept and coefficients** for each independent variable.
 
 🟩 For this analysis, the first 100 customer records from the processed campaign dataset were set aside for testing, while the remaining data were used to build a logistic regression model. The correlation between each independent variable and the target was calculated, and the top 10 features were selected as predictors. After training, the model’s intercept and coefficients were obtained to assess the direction and magnitude of each feature’s influence.
@@ -184,7 +179,7 @@ The next figure illustrates the intercept and coefficients of the top 10 feature
 
 **5.2 🧪 Model Testing**  
 - Test the model on the **first 100 records**.  
-- Explain results with **appropriate graphs** 📈 and performance metrics.
+- Explain results with **appropriate graphs** and performance metrics.
 
 🟩 The logistic regression model was evaluated using the first 100 customer records reserved for testing. Predictions were compared with actual outcomes, and performance was assessed using accuracy and a confusion matrix.
 
@@ -201,9 +196,7 @@ The model achieved 79% accuracy, correctly predicting 65 non-purchases (true neg
 
 
 **5.3 💻 Predictive Application**  
-- Implement an application using the **logistic regression model**.  
-- Include a **user interface** to input customer records via **keyboard or file upload** ⌨️📁.  
-- Output **predicted Affinity Card results** to the user 🎯.
+An application is implemented using the logistic regression model, featuring a user interface that allows input of customer records via keyboard or file upload, and provides predicted Affinity Card results to the user.
 
 🟩 A predictive application was developed based on the logistic regression model, featuring a user-friendly interface for real-time predictions of affinity card purchases (Figure-5.3.1). Users can enter customer data manually or upload a CSV file.
 
@@ -232,7 +225,7 @@ The following figures illustrate the interfaces of the workflow:
 
 **🛠 Key functions implemented**: _init_, show_model_summary, create_widgets, manual_entry, predict, display_prediction
 
-
+--- 
 
 
 ### 📎 Deliverables
@@ -245,6 +238,13 @@ The following figures illustrate the interfaces of the workflow:
   - Logistic regression model & testing 🏗🧪  
   - Predictive application 💻
   - Processed dataset with new **binary and ordinal variables**, **sentiment column**, and **logistic regression results** ✅
+
+---
+
+## 🌐 I’d Love to Connect!
+
+- **LinkedIn:** [Md Fahim Hossain](https://www.linkedin.com/in/md-fahim-hossain-b51258227/)  
+- **Email:** [fahimhossain0729@gmail.com](mailto:fahimhossain0729@gmail.com)
 
 
 <div align="center">
