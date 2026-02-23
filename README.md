@@ -28,7 +28,7 @@ This project demonstrates an **end-to-end data analytics workflow** focused on p
 <div align="center">
 
 | **Observation**                 | **Details** |
-|---------------------------------|-------------|
+|:--------------------------------:|:-----------:|
 | Total Records                   | 1,500       |
 | Total Variables                 | 19          |
 | Target Variable Name            | AFFINITY_CARD |
