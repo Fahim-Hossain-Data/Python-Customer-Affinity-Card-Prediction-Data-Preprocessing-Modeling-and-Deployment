@@ -5,7 +5,7 @@ This project demonstrates an **end-to-end data analytics workflow** focused on p
 
 <div align="center">
 
-## 🛠 Key Libraries & Skills Demonstrated
+## 🛠 Key Libraries & Skills
 
 **Data Manipulation & Analysis:** `pandas`, `numpy` — Data cleaning and transformation  
 
