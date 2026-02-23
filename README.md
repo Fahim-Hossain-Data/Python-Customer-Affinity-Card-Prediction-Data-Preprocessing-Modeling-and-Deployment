@@ -3,8 +3,6 @@
 ## 📋 Project Overview
 This project demonstrates an **end-to-end data analytics workflow** focused on predictive modeling and business insights. It combines **feature engineering, sentiment analysis, and logistic regression** to identify key drivers of customer behavior. A **user-friendly application** was developed to provide real-time predictions, showcasing practical skills in Python, data visualization, and applied machine learning.
 
----
-
 <div align="center">
 
 ## 🛠 Key Libraries & Skills Demonstrated
