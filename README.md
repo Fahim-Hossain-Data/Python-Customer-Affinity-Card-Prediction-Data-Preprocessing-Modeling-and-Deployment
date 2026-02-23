@@ -76,7 +76,7 @@ A portion of the metadata table, showing a few representative attributes, is pre
 
 **2.2 🧼 Data Cleaning:** 
 
-Justification for each cleaning step (handling missing and erroneous data)
+- Justification for each cleaning step (handling missing and erroneous data)
 
 🟩 The cleaning process for HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns are descrived below:
 - **HOUSEHOLD_SIZE**
