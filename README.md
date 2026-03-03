@@ -9,7 +9,7 @@ This project demonstrates an **end-to-end data analytics workflow** focused on p
 
 **Data Manipulation & Analysis:** `pandas`, `numpy` — Data cleaning and transformation  
 
-**Data Visualization:** `matplotlib`, `seaborn` — Data visualization  
+**Data Visualization:** `matplotlib`, `seaborn` — visualization  
 
 **Machine Learning:** `scikit-learn` (`LogisticRegression`, `train_test_split`, `StandardScaler`, `accuracy_score`, `confusion_matrix`) — Model building, evaluation, and prediction  
 
@@ -77,12 +77,12 @@ A portion of the metadata table, showing a few representative attributes, is pre
 **2.2 🧼 Data Cleaning:** Justification for each cleaning step (handling missing and erroneous data)
 
 🟩 The cleaning process for HOUSEHOLD_SIZE, OCCUPATION, and COMMENTS columns are descrived below:
-- **HOUSEHOLD_SIZE**
-Error values such as “9+”, “5-Apr”, and “8-Jun” were identified. The value “9+” is replaced with 9, while invalid entries like “5-Apr” and “8-Jun” are removed.
-- **OCCUPATION**
-Entries marked as “?” indicate missing occupation data and are removed. This ensures the column contains only valid categorical values, maintaining dataset quality for analysis.
-- **COMMENTS**
-Null or blank entries are replaced with “No Comment”, explicitly marking missing feedback as a valid category.
+- **HOUSEHOLD_SIZE:**
+Error values such as “9+”, “5-Apr”, and “8-Jun” were identified. The value “9+” was replaced with 9, while invalid entries like “5-Apr” and “8-Jun” were removed.
+- **OCCUPATION:**
+Entries marked as “?” indicated missing occupation data and were removed. This ensures the column contains only valid categorical values, maintaining dataset quality for analysis.
+- **COMMENTS:**
+Null or blank entries were replaced with “No Comment”, explicitly marking missing feedback as a valid category.
 
 
 The proposed suggestions for handling missing values and error values are presented in the following table 
@@ -100,7 +100,7 @@ After cleaning, the dataset contains **1312** valid rows, with **188** rows remo
 
 </div>
   
-- Write Python programs for the following conversions:  
+- Python programs for the following conversions:  
 
   - **2.3 👤 CUST_GENDER → binary:** converted into a binary variable using a **mapping** approach to simplify analysis: F → 0, M → 1.
     
@@ -129,9 +129,9 @@ After cleaning, the dataset contains **1312** valid rows, with **188** rows remo
   
 **3.2 📝 Sentiment Analysis**  
 
-🟩 The COMMENTS column was analyzed for sentiment using the TextBlob package. A function classify_sentiment computes the polarity of each comment and classifies it as positive (1), neutral (0), or negative (-1). The results are stored in a new column, SENTIMENT.
+🟩 The COMMENTS column was analyzed for sentiment using the TextBlob package. A function, classify_sentiment, computes the polarity of each comment and classifies it as positive (1), neutral (0), or negative (-1). The results are stored in a new column, SENTIMENT.
 
-The number of comments classified under the SENTIMENT column and the levels (-1, 0, +1) are shown in the following figure 
+The number of comments classified under the SENTIMENT column and the levels (-1, 0, +1) are shown in the following figure. 
 
 <p align="center">
   <img src="https://github.com/Fahim0729/Python-Customer-Affinity-Card-Prediction-Data-Preprocessing-Modeling-and-Deployment/blob/4a4340fa8026d1ab1fe1cd55886a2598e3724753/Senti.png" alt="Histogram" width="600"/>
@@ -144,7 +144,7 @@ The number of comments classified under the SENTIMENT column and the levels (-1,
 ### 4. Data Exploration
 A Python program has been developed to display histograms of any processed variable, allowing users to select the variable at runtime. The program runs continuously, providing visual insights until the user chooses to exit.
 
-🟩 The Python program will be developed to visualize the distribution of processed variables ('CUST_GENDER', 'CUST_MARITAL_STATUS', 'COUNTRY_NAME', 'CUST_INCOME_LEVEL', 'EDUCATION', 'OCCUPATION', and 'sentiment') using histograms. In this program, users are allowed to select any one variable at runtime, and its corresponding histogram will be displayed. The program is designed to run continuously in a loop until an explicit exit command is given by the user. This interactive functionality has been implemented to support exploratory data analysis (EDA), where the distribution, spread, and potential outliers of variables can be observed. Such visual analysis is considered essential for understanding the underlying structure of the data during preprocessing and model development stages. 
+🟩 The Python program is developed to visualize the distribution of processed variables ('CUST_GENDER', 'CUST_MARITAL_STATUS', 'COUNTRY_NAME', 'CUST_INCOME_LEVEL', 'EDUCATION', 'OCCUPATION', and 'sentiment') using histograms. In this program, users are allowed to select any one variable at runtime, and its corresponding histogram will be displayed. The program is designed to run continuously in a loop until an explicit exit command is given by the user. This interactive functionality has been implemented to support exploratory data analysis (EDA), where the distribution, spread, and potential outliers of variables can be observed. Such visual analysis is considered essential for understanding the underlying structure of the data during preprocessing and model development stages. 
 The user is presented with the interface shown in the following figure, where they can enter a variable name or exit the program.
 
 <p align="center">
@@ -164,7 +164,7 @@ The user is presented with the interface shown in the following figure, where th
 
 🟩 For this analysis, the first 100 customer records from the processed campaign dataset were set aside for testing, while the remaining data were used to build a logistic regression model. The correlation between each independent variable and the target was calculated, and the top 10 features were selected as predictors. After training, the model’s intercept and coefficients were obtained to assess the direction and magnitude of each feature’s influence.
 
-The intercept value of -1.730 serves as the baseline. Among the top predictors, CUST_GENDER (1.035) has the strongest positive impact, followed by EDUCATION (0.645), OCCUPATION (0.469), YRS_RESIDENCE (0.468), and HOME_THEATER_PACKAGE (0.401). Most features positively influence the outcome, while OS_DOC_SET_KANJI (-0.203) shows a slight negative effect.
+The intercept value of -1.730 served as the baseline. Among the top predictors, CUST_GENDER (1.035) had the strongest positive impact, followed by EDUCATION (0.645), OCCUPATION (0.469), YRS_RESIDENCE (0.468), and HOME_THEATER_PACKAGE (0.401). Most features positively influence the outcome, while OS_DOC_SET_KANJI (-0.203) showed a slight negative effect.
 
 The next figure illustrates the intercept and coefficients of the top 10 features.
 
@@ -194,7 +194,7 @@ The model achieved 79% accuracy, correctly predicting 65 non-purchases (true neg
 
 
 **5.3 💻 Predictive Application**  
-An application is implemented using the logistic regression model, featuring a user interface that allows input of customer records via keyboard or file upload, and provides predicted Affinity Card results to the user.
+An application was implemented using the logistic regression model, featuring a user interface that allows input of customer records via keyboard or file upload, and provides predicted Affinity Card results to the user.
 
 🟩 A predictive application was developed based on the logistic regression model, featuring a user-friendly interface for real-time predictions of affinity card purchases (Figure-5.3.1). Users can enter customer data manually or upload a CSV file.
 
